@@ -3,7 +3,7 @@ from collections import defaultdict
 import os
 
 # İşlenecek dosyanın tam yolu
-dosya_yolu = r"C:\Users\Elif\OneDrive\Masaüstü\03-11\Syn.csv"  # <- buraya kendi dosya yolunu gir
+dosya_yolu =  # <- buraya kendi dosya yolunu gir
 
 sütun_sayac = defaultdict(int)
 benign_toplam = 0
