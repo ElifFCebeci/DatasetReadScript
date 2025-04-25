@@ -1,11 +1,9 @@
 import pandas as pd
-from collections import defaultdict
 import os
 
 # İşlenecek dosyanın tam yolu
-dosya_yolu =  # <- buraya kendi dosya yolunu gir
+dosya_yolu = r  # <- buraya kendi dosya yolunu gir
 
-sütun_sayac = defaultdict(int)
 benign_toplam = 0
 syn_toplam = 0
 
@@ -19,11 +17,6 @@ try:
         df = pd.read_excel(dosya_yolu)
 
     print(f"{dosya} satır sayısı: {len(df)}")
-    print(f"{dosya} sütunları: {df.columns.tolist()}")
-
-    # Sütun sayacı
-    for sutun in df.columns:
-        sütun_sayac[sutun.strip()] += 1
 
     # BENIGN ve SYN sayımı
     if " Label" in df.columns:
@@ -38,9 +31,3 @@ try:
 except Exception as e:
     print(f"{dosya} okunurken hata oluştu: {e}")
 
-print("\nToplam BENIGN sayısı:", benign_toplam)
-print("Toplam SYN sayısı:", syn_toplam)
-
-print("\nSütun (Etiket) Sayıları:")
-for sutun, sayi in sütun_sayac.items():
-    print(f"{sutun}: {sayi} kez bulundu")
