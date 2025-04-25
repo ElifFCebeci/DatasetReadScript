@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from collections import defaultdict
 
-klasor_yolu = r"C:\Users\Elif\OneDrive\Masaüstü\TrafficLabelling"
+klasor_yolu = 
 sütun_sayac = defaultdict(int)
 uzantilar = [".csv", ".xlsx", ".xls"]
 
